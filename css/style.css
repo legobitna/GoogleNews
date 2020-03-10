@@ -1,0 +1,20 @@
+.footer {
+    bottom : 0;
+}
+
+header {
+    background-color: white;
+    height: 5rem;
+}
+
+a, a :hover {
+    text-decoration: none;
+}
+
+#categoryList {
+    white-space: wrap;
+}
+
+.card {
+    min-height: 10rem !important;
+}

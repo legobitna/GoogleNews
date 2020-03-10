@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>News Feed App</title>
+
+</head>
+
+<body>
+    <nav id="nav" class="nav"></nav>
+    <header class="header d-flex align-items-center justify-content-center text-dark px-2">
+        <div class="row container-fluid d-flex align-items-center">
+            <div class="col-sm col-md-1"></div>
+            <div class="col-4">
+                <h2 class="p-0 m-0 h2 text-bold">BREAKING NEWS</h2>
+            </div>
+            <div class="col-1 col-md-3"></div>
+            <div class="col-6 col-md-3 mr-md-5 d-flex align-items-center">
+                <input type="text" class="form-control rounded-left" id="inlineFormInputGroup" placeholder="Search for topics">
+                <div class="input-group-append rounded-right">
+                    <button id="searchBtn" class="btn btn-secondary rounded-right"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <hr>
+    <main class="container-fluid d-flex justify-content-center p-0">
+        <div class="row container-fluid m-0 px-0 px-md-5">
+            <div class="col-4 col-md-2 ml-0 ml-md-5">
+                <p class="text-left mb-3">Showing <span id="numberOfArticles" class="text-info">0</span>
+                    articles</p>
+
+                <!-- <h5 class="mb-2">Category:</h5> -->
+                <div class="dropdown dropright mb-3">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categories
+                    </button>
+                    <div id="categoryDropdown" class="dropdown-menu" aria-labelledby="dropdownMenu2"></div>
+                </div>
+                <hr>
+                <p id="categoryList" class="list-group"></p>
+                <h5 class="mb-2">Sources</h5>
+                <ul id="Sources" class="list-group"></ul>
+                <h5 class="mt-2"><a href="#" onclick="renderNews(newsArticles)">Show all</a></h5>
+            </div>
+            <div class="col-7 col-md-9 ml-1 mx-0 mx-sm-2 mr-0 mr-md-5 pl-2 pr-0 p-md-2 pr-0 container">
+                <div id="renderNewsArea" class="row container px-0 mr-0">
+
+                </div>
+                <div class="row container">
+                    <footer class="container footer sticky-bottom">
+                        <span class="pageNum float-left"><a href="#nav">Back to Top</a></span>
+                        <button onclick="fetchMoreNews()" class="btn float-right p-0 mt-0">more</button>
+                    </footer>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+
+    <!-- Optional JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
